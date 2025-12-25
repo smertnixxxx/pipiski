@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusView | Rule34 Image Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header class="app-header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-text">Nexus</span><span class="logo-accent">View</span>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search tags..." autocomplete="off">
+                <button id="searchBtn" title="Search">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button id="luckyBtn" title="I Feel Lucky">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="header-right">
+            <!-- Space for future settings or profile -->
+        </div>
+    </header>
+
+    <main class="content-area">
+        <div id="imageGrid" class="app-grid">
+            <div class="welcome-container">
+                <div class="hero-text">Explore Infinite Content</div>
+                <p>High-quality images, videos, and GIFs at your fingertips.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="loader" class="loader hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Full Resolution">
+            <div class="modal-info">
+                <div class="tags-list" id="modalTags"></div>
+                <div class="modal-actions">
+                    <a id="downloadBtn" href="#" target="_blank" download class="btn-primary">Download Original</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
